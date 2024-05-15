@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . './DBProducts.php';
 
 class Categories {
     public $food;
@@ -7,8 +6,6 @@ class Categories {
     public $toys;
     public $accessories;
     public $hygiene;
-    
-    // public $categories = ['food', 'snack', 'toys', 'accessories', 'hygiene'];
 
     public function __construct($_food, $_snack, $_toys, $_accessoryes, $_hygiene){
         $this->food = $_food;
@@ -18,5 +15,8 @@ class Categories {
         $this->hygiene = $_hygiene;
     }
 }
-$categoriesList = new Categories('food', 'snack', 'toys', 'accessories', 'hygiene')
+$categoriesList = new Categories('food', 'snack', 'toys', 'accessories', 'hygiene');
+$categories = [
+    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene'
+];
 ?>

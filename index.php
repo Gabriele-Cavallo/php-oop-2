@@ -10,12 +10,28 @@ require_once __DIR__ . './Models/Cats.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Pets Shop</title>
 </head>
 <body>
-    <?php var_dump($productsList) ?>
-    <?php var_dump($categoriesList) ?>
-    <?php var_dump($categoriesDogsList) ?>
-    <?php var_dump($categoriesCatsList) ?>
+    <div class="categories-wrapper">
+        <?php foreach($categories as $category) { ?>
+            <div class="card-wrapper">
+                <h2><?php echo $category ?></h2>
+                <div class="cards">
+                    <?php foreach($productsList as $singleProduct) { ?>
+                        <?php if ($singleProduct->type == $category){ ?>
+                            <div>
+                                <img src="<?php echo  $singleProduct->image; ?>" alt="product">
+                                <h4><?php echo  $singleProduct->category; ?></h4>
+                                <h4><?php echo  $singleProduct->price; ?></h4>
+                                <h4><?php echo  $singleProduct->type; ?></h4>
+                            </div>
+                        <?php }?>
+                    <?php } ?>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
 </body>
 </html>

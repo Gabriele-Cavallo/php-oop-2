@@ -1,17 +1,17 @@
 <?php
 // $productsList = new ProductCategory('food', 'snack', 'toys', 'accessories', 'hygiene');
-$firstDogProduct = new Product('img', 'dog', 9.99, 'food');
-$firstCatProduct = new Product('img', 'cat', 9.99, 'food');
-$secondDogProduct = new Product('img', 'dog', 7.99, 'snack');
-$secondCatProduct = new Product('img', 'cat', 7.99, 'snack');
-$thirdDogProduct = new Product('img', 'dog', 19.99, 'toys');
-$thirdCatProduct = new Product('img', 'cat', 19.99, 'toys');
-$fourthDogProduct = new Product('img', 'dog', 29.99, 'accessories');
-$fourthCatProduct = new Product('img', 'cat', 29.99, 'accessories');
-$fifthDogProduct = new Product('img', 'dog', 49.99, 'hygiene');
-$fifthCatProduct = new Product('img', 'cat', 49.99, 'hygiene');
+$firstDogProduct = new Product('./img/cane.jpg', 'dog', 9.99, 'Food');
+$firstCatProduct = new Product('./img/gatto.jpeg', 'cat', 9.99, 'Food');
+$secondDogProduct = new Product('./img/cane.jpg', 'dog', 7.99, 'Snack');
+$secondCatProduct = new Product('./img/gatto.jpeg', 'cat', 7.99, 'Snack');
+$thirdDogProduct = new Product('./img/cane.jpg', 'dog', 19.99, 'Toys');
+$thirdCatProduct = new Product('./img/gatto.jpeg', 'cat', 19.99, 'Toys');
+$fourthDogProduct = new Product('./img/cane.jpg', 'dog', 29.99, 'Accessories');
+$fourthCatProduct = new Product('./img/gatto.jpeg', 'cat', 29.99, 'Accessories');
+$fifthDogProduct = new Product('./img/cane.jpg', 'dog', 49.99, 'Hygiene');
+$fifthCatProduct = new Product('./img/gatto.jpeg', 'cat', 49.99, 'Hygiene');
 
 $productsList = [
-    $firstDogProduct, $secondDogProduct, $thirdDogProduct, $fourthDogProduct, $fifthDogProduct
-]
+    $firstDogProduct, $firstCatProduct, $secondDogProduct, $secondCatProduct, $thirdDogProduct, $thirdCatProduct, $fourthDogProduct, $fourthCatProduct, $fifthDogProduct, $fifthCatProduct
+];
 ?>

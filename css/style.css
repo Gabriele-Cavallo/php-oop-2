@@ -32,5 +32,13 @@ img{
     margin: 10px;
 }
 .cards *{
+    width: 50%;
     background-color: white;
+}
+.cards img{
+    width: 100%;
+    object-fit: contain;
+}
+.cards h4{
+    width: 100%;
 }

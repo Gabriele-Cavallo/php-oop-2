@@ -10,8 +10,15 @@ $fourthDogProduct = new Product('./img/cane.jpg', 'dog', 29.99, 'Accessories');
 $fourthCatProduct = new Product('./img/gatto.jpeg', 'cat', 29.99, 'Accessories');
 $fifthDogProduct = new Product('./img/cane.jpg', 'dog', 49.99, 'Hygiene');
 $fifthCatProduct = new Product('./img/gatto.jpeg', 'cat', 49.99, 'Hygiene');
+$leash = new Product('./img/cane.jpg', 'dog', 15.99, 'Leash');
+$bib = new Product('./img/cane.jpg', 'dog', 7.99, 'Bib');
+$scratchingPost = new Product('./img/gatto.jpeg', 'cat', 16.99, 'Scratching Post');
+$carriers = new Product('./img/gatto.jpeg', 'cat', 37.99, 'Carriers');
+
 
 $productsList = [
-    $firstDogProduct, $firstCatProduct, $secondDogProduct, $secondCatProduct, $thirdDogProduct, $thirdCatProduct, $fourthDogProduct, $fourthCatProduct, $fifthDogProduct, $fifthCatProduct
+    $firstDogProduct, $firstCatProduct, $secondDogProduct, $secondCatProduct,
+    $thirdDogProduct, $thirdCatProduct, $fourthDogProduct, $fourthCatProduct, 
+    $fifthDogProduct, $fifthCatProduct, $leash , $bib, $scratchingPost, $carriers
 ];
 ?>

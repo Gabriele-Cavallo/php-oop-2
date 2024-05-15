@@ -11,5 +11,8 @@ class Dogs extends Categories{
         $this->bib = $_bib;
     }
 }
-$categoriesDogsList = new Dogs('food', 'snack', 'toys', 'accessories', 'hygiene', 'leash', 'bib')
+$categoriesDogsList = new Dogs('food', 'snack', 'toys', 'accessories', 'hygiene', 'leash', 'bib');
+$categoriesDogs = [
+    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene', 'Leash', 'Bib'
+];
 ?>

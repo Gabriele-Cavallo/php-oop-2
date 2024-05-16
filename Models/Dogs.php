@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . './Categories.php';
+require_once __DIR__ . './Category.php';
 
-class Dogs extends Categories{
+class Dogs extends Category{
     public $leash;
     public $bib;
 

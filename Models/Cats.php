@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . './Categories.php';
+require_once __DIR__ . './Category.php';
 
-class Cats extends Categories{
+class Cats extends Category{
     public $scratchingPost;
     public $carriers;
 

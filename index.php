@@ -1,14 +1,19 @@
 <?php
 require_once __DIR__ . './Models/Product.php';
 require_once __DIR__ . './Models/DBProducts.php';
-require_once __DIR__ . './Models/Categories.php';
+require_once __DIR__ . './Models/Category.php';
 require_once __DIR__ . './Models/Dogs.php';
 require_once __DIR__ . './Models/Cats.php';
 
 // Generic categories
-$categoriesList = new Categories('food', 'snack', 'toys', 'accessories', 'hygiene');
+$food = new Category('Food');
+$snack = new Category('Snack');
+$toys = new Category('Toys');
+$accessories = new Category('Accessories');
+$hygiene = new Category('Hygiene');
+// $categoriesList = new Categors('food', 'snack', 'toys', 'accessories', 'hygiene');
 $categories = [
-    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene'
+    $food, $snack, $toys, $accessories, $hygiene
 ];
 // Dogs categories
 $categoriesDogsList = new Dogs('food', 'snack', 'toys', 'accessories', 'hygiene', 'leash', 'bib');
@@ -35,10 +40,10 @@ $categoriesCats = [
         <div class="categories-wrapper">
             <?php foreach($categories as $category) { ?>
                 <div class="card-wrapper">
-                    <h2><?php echo $category ?></h2>
+                    <h2><?php echo $category->name ?></h2>
                     <div class="cards">
                         <?php foreach($productsList as $singleProduct) { ?>
-                            <?php if ($singleProduct->type == $category){ ?>
+                            <?php if ($singleProduct->type == $category->name){ ?>
                                 <div>
                                     <img src="<?php echo  $singleProduct->image; ?>" alt="product">
                                     <h4><?php echo  $singleProduct->category; ?></h4>

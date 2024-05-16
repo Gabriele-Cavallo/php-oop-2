@@ -2,26 +2,11 @@
 require_once __DIR__ . './Models/Product.php';
 require_once __DIR__ . './Models/DBProducts.php';
 require_once __DIR__ . './Models/Category.php';
+require_once __DIR__ . './Models/DBCategories.php';
 require_once __DIR__ . './Models/Dogs.php';
 require_once __DIR__ . './Models/Cats.php';
 
-// Categories products
-$food = new Category('Food');
-$snack = new Category('Snack');
-$toys = new Category('Toys');
-$accessories = new Category('Accessories');
-$hygiene = new Category('Hygiene');
-$leash = new Category('Leash');
-$leash->category = 'dog';
-$bib = new Category('Bib');
-$bib->category = 'dog';
-$scratchingPost = new Category('Scratching Post');
-$scratchingPost->category = 'cat';
-$carriers = new Category('Carriers');
-$carriers->category = 'cat';
-$categories = [
-    $food, $snack, $toys, $accessories, $hygiene, $leash, $bib, $scratchingPost, $carriers 
-];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

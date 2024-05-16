@@ -1,5 +1,9 @@
 <?php 
+require_once __DIR__ . '/../Traits/Age.php';
+
 class Product {
+    use Age;
+
     public $image;
     public $category;
     public $price;

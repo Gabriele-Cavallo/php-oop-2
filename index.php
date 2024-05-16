@@ -3,10 +3,6 @@ require_once __DIR__ . './Models/Product.php';
 require_once __DIR__ . './Models/DBProducts.php';
 require_once __DIR__ . './Models/Category.php';
 require_once __DIR__ . './Models/DBCategories.php';
-require_once __DIR__ . './Models/Dogs.php';
-require_once __DIR__ . './Models/Cats.php';
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,12 +22,19 @@ require_once __DIR__ . './Models/Cats.php';
                         <h2><?php echo $category->name ?></h2>
                         <div class="cards">
                             <?php foreach($productsList as $singleProduct) { ?>
+                                <?php $className = get_class($singleProduct) ?>
                                 <?php if ($singleProduct->type == $category->name){ ?>
                                     <div>
                                         <img src="<?php echo  $singleProduct->image; ?>" alt="product">
                                         <h4><?php echo  $singleProduct->category; ?></h4>
                                         <h4><?php echo  $singleProduct->price; ?></h4>
                                         <h4><?php echo  $singleProduct->type; ?></h4>
+                                        <?php if($className == 'Accessory') { ?>
+                                            <h4>Size: <?php echo  $singleProduct->size; ?></h4>
+                                        <?php } ?>
+                                        <?php if($singleProduct->age) { ?>
+                                            <h4>Age: <?php echo  $singleProduct->age; ?> +</h4>
+                                        <?php } ?>
                                     </div>
                                 <?php }?>
                             <?php } ?>
@@ -50,12 +53,19 @@ require_once __DIR__ . './Models/Cats.php';
                         <h2><?php echo $category->name ?></h2>
                         <div class="cards">
                             <?php foreach($productsList as $singleProduct) { ?>
+                                <?php $className = get_class($singleProduct) ?>
                                 <?php if ($singleProduct->type == $category->name && $singleProduct->category == 'dog'){ ?>
                                     <div>
                                         <img src="<?php echo  $singleProduct->image; ?>" alt="product">
                                         <h4><?php echo  $singleProduct->category; ?></h4>
                                         <h4><?php echo  $singleProduct->price; ?></h4>
                                         <h4><?php echo  $singleProduct->type; ?></h4>
+                                        <?php if($className == 'Accessory') { ?>
+                                            <h4>Size: <?php echo  $singleProduct->size; ?></h4>
+                                        <?php } ?>
+                                        <?php if($singleProduct->age) { ?>
+                                            <h4>Age: <?php echo  $singleProduct->age; ?> +</h4>
+                                        <?php } ?>
                                     </div>
                                 <?php }?>
                             <?php } ?>
@@ -74,12 +84,19 @@ require_once __DIR__ . './Models/Cats.php';
                         <h2><?php echo $category->name ?></h2>
                         <div class="cards">
                             <?php foreach($productsList as $singleProduct) { ?>
+                                <?php $className = get_class($singleProduct) ?>
                                 <?php if ($singleProduct->type == $category->name && $singleProduct->category == 'cat'){ ?>
                                     <div>
                                         <img src="<?php echo  $singleProduct->image; ?>" alt="product">
                                         <h4><?php echo  $singleProduct->category; ?></h4>
                                         <h4><?php echo  $singleProduct->price; ?></h4>
                                         <h4><?php echo  $singleProduct->type; ?></h4>
+                                        <?php if($className == 'Accessory') { ?>
+                                            <h4>Size: <?php echo  $singleProduct->size; ?></h4>
+                                        <?php } ?>
+                                        <?php if($singleProduct->age) { ?>
+                                            <h4>Age: <?php echo  $singleProduct->age; ?> +</h4>
+                                        <?php } ?>
                                     </div>
                                 <?php }?>
                             <?php } ?>

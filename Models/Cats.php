@@ -11,8 +11,4 @@ class Cats extends Categories{
         $this->carriers = $_carriers;
     }
 }
-$categoriesCatsList = new Cats('food', 'snack', 'toys', 'accessories', 'hygiene', 'scratching post', 'carriers');
-$categoriesCats = [
-    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene', 'Scratching Post', 'Carriers'
-];
 ?>

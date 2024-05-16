@@ -15,8 +15,4 @@ class Categories {
         $this->hygiene = $_hygiene;
     }
 }
-$categoriesList = new Categories('food', 'snack', 'toys', 'accessories', 'hygiene');
-$categories = [
-    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene'
-];
 ?>

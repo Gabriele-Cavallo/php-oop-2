@@ -4,6 +4,22 @@ require_once __DIR__ . './Models/DBProducts.php';
 require_once __DIR__ . './Models/Categories.php';
 require_once __DIR__ . './Models/Dogs.php';
 require_once __DIR__ . './Models/Cats.php';
+
+// Generic categories
+$categoriesList = new Categories('food', 'snack', 'toys', 'accessories', 'hygiene');
+$categories = [
+    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene'
+];
+// Dogs categories
+$categoriesDogsList = new Dogs('food', 'snack', 'toys', 'accessories', 'hygiene', 'leash', 'bib');
+$categoriesDogs = [
+    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene', 'Leash', 'Bib'
+];
+// Cats categories
+$categoriesCatsList = new Cats('food', 'snack', 'toys', 'accessories', 'hygiene', 'scratching post', 'carriers');
+$categoriesCats = [
+    'Food', 'Snack', 'Toys', 'Accessories', 'Hygiene', 'Scratching Post', 'Carriers'
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
